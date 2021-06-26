@@ -7,6 +7,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CaroselComponent } from './carosel/carosel.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ScrollDirective } from './scroll.directive';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { CaroselComponent } from './carosel/carosel.component';
     LandingComponent,
     HeaderComponent,
     FooterComponent,
-    CaroselComponent
+    CaroselComponent,
+    ScrollDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

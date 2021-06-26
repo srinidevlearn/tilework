@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaroselComponent implements OnInit {
 
+  myInterval:number = 3*1000;
+  showIndicator = false
+
   constructor() { }
 
   ngOnInit(): void {
