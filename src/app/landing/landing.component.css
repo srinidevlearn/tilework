@@ -1,6 +1,11 @@
-.body {
-  height: 1000px;
+:host{
+padding:0;
+font-family: poppins,sans-serif;
 }
+.body {
+  overflow-y: auto;
+}
+
 
 .item {
   width: 200px;
@@ -1541,8 +1546,8 @@ ul > li {
 }
 
 .grid-item {
-  padding: 20px;
-  font-size: 30px;
+  padding: 10px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -1552,6 +1557,9 @@ ul > li {
   clip-path: "d M21.6,-37.1C27.5,-34,31.5,-27.2,35.7,-20.4C40,-13.7,44.4,-6.8,44.7,0.2C45,7.2,41.2,14.4,37,21.3C32.8,28.1,28.3,34.7,22.1,37.8C15.9,40.8,7.9,40.4,0.5,39.6C-7,38.7,-13.9,37.4,-19.5,34C-25,30.5,-29.2,24.9,-33.7,18.9C-38.2,12.8,-43.1,6.4,-43.9,-0.4C-44.6,-7.3,-41.3,-14.6,-37.3,-21.5C-33.3,-28.4,-28.6,-34.9,-22.3,-37.8C-16,-40.7,-8,-39.9,-0.1,-39.8C7.8,-39.6,15.7,-40.2,21.6,-37.1Z";
 }
 
+.card-deck .card{
+  min-width: 10rem;
+}
 
 /* Required styles */
 
@@ -1573,17 +1581,93 @@ ul > li {
 .image:hover .image__foreground {
   transform: translateY(-7px) scale(1.02, 1.02);
 }
+.my-containers{
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.moving_shape {
+  width: 100%;
+  height: 100%;
+  background: #FF0099;
+  background-repeat: repeat;
+  background-size: auto auto;
+  background-color: greenyellow;
+
+  /* border: 2px solid rgba(173, 255, 47, 0.3); */
+  background-size: 1000%;
+  background-repeat: repeat;
+  /* box-shadow: 0px 0px 5px 0px rgb(0, 0, 0, 43%); */
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  animation: border-move 15s linear infinite forwards;
+}
+
+
+@keyframes border-move {
+  0% {
+      border-radius: 51% 49% 34% 66% / 39% 66% 34% 61%;
+  }
+
+  10% {
+      border-radius: 39% 61% 38% 62% / 53% 54% 46% 47%;
+  }
+
+  20% {
+      border-radius: 56% 44% 52% 48% / 57% 35% 65% 43%;
+  }
+
+  30% {
+      border-radius: 41% 59% 45% 55% / 33% 56% 44% 67%;
+  }
+
+  40% {
+      border-radius: 46% 54% 60% 40% / 55% 74% 26% 45%;
+  }
+
+  50% {
+      border-radius: 44% 56% 22% 78% / 31% 74% 26% 69%;
+  }
+
+  60% {
+      border-radius: 31% 69% 32% 68% / 31% 71% 29% 69%;
+  }
+
+  70% {
+      border-radius: 44% 56% 60% 40% / 63% 36% 64% 37%;
+  }
+
+  80% {
+      border-radius: 46% 54% 38% 62% / 44% 48% 52% 56%;
+  }
+
+  90% {
+      border-radius: 66% 34% 57% 43% / 49% 51% 49% 51%;
+  }
+
+  100% {
+      border-radius: 51% 49% 34% 66% / 39% 66% 34% 61%;
+  }
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
-.fallback-image {
-  clip: rect(0 0 0 0); 
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
-  } 
+  .fallback-image {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 }
 
 @media (prefers-reduced-motion) {

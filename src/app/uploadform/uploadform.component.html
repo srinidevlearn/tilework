@@ -1,0 +1,18 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card p-2 shadow">
+                <!-- <div class="card-title text-center"><h3>Upload Forms</h3></div> -->
+                <div class="card-body">
+                    <form [formGroup]="form" (ngSubmit)="submit()">
+                        <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+                    </form>
+                </div>
+                <div class="card-footer bg-transparent text-right">
+                    <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
