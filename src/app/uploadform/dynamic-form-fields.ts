@@ -6,7 +6,7 @@ export const dynamicUploadFormFields = [
         fieldGroup: [
             {
                   className: 'col-12',
-                  template: '<div class="alert alert-primary text-center" role="alert">Upload Product related informations</div>',
+                  template: '<div class="alert alert-secondary text-center" role="alert"><span class="text-grey">Upload Product related informations</span></div>',
                 },
             {
                 className: 'col-6',

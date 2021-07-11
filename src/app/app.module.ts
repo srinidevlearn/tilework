@@ -18,6 +18,12 @@ import { FileInputAccessor } from './directives/file-input.directive';
 import { FormlyFieldFile } from './uploadform/file-input-component';
 import { FileUploadModule } from '@iplab/ngx-file-upload';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductCardViewComponent } from './product-card-view/product-card-view.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { MockApiService } from './mock-api.service';
+import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductApiService } from './product-card-view/card-api.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CaroselComponent,
     ScrollDirective,
     UploadformComponent,
-    FileInputAccessor,FormlyFieldFile
+    FileInputAccessor,FormlyFieldFile, ProductCardViewComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CarouselModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FileUploadModule,
+    environment.production ?
+    [] : HttpClientInMemoryWebApiModule.forRoot(MockApiService,{ delay: 1500 }),
     FormlyModule.forRoot({
       validationMessages: [
         { name: 'required', message: 'This field is required' },
@@ -48,7 +57,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormlyBootstrapModule,
     // FormlyMaterialModule
   ],
-  providers: [],
+  providers: [ProductApiService,MockApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
