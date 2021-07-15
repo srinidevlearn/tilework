@@ -24,6 +24,7 @@ import { MockApiService } from './mock-api.service';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductApiService } from './product-card-view/card-api.service';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { ProductApiService } from './product-card-view/card-api.service';
       // extras: { lazyRender: true } 
     }),
     FormlyBootstrapModule,
+    ScullyLibModule,
     // FormlyMaterialModule
   ],
   providers: [ProductApiService,MockApiService],

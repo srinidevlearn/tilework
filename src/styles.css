@@ -44,7 +44,7 @@ body {
 .cursive {
   font-family:'Marck Script', cursive;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: capitalize;
   background: var(--gray);

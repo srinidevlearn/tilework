@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,9 @@
     "@iplab/ngx-file-upload": "^3.3.1",
     "@ngx-formly/bootstrap": "^5.0.0",
     "@ngx-formly/core": "^5.10.22",
+    "@scullyio/init": "^1.1.4",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "angular-in-memory-web-api": "^0.11.0",
     "aos": "^2.3.4",
     "ngx-bootstrap": "^6.2.0",
