@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,Meta } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,9 @@ import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductApiService } from './product-card-view/card-api.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { LiquidButtonComponent } from './liquid-button/liquid-button.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     CaroselComponent,
     ScrollDirective,
     UploadformComponent,
-    FileInputAccessor,FormlyFieldFile, ProductCardViewComponent
+    FileInputAccessor,FormlyFieldFile, ProductCardViewComponent, LiquidButtonComponent
   ],
   imports: [
     BrowserModule,

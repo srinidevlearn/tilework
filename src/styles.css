@@ -39,6 +39,8 @@ body {
 
 .whitesmoke {
   background: whitesmoke;
+background:linear-gradient(to right bottom, rgb(255, 228, 230), rgb(204, 251, 241))
+
 }
 
 .cursive {
@@ -47,6 +49,7 @@ body {
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: capitalize;
+  
   background: var(--gray);
   /* linear-gradient(#799BF2,#F5F5F5); */
   /* linear-gradient(rgb(17, 24, 39), rgb(87, 83, 78)); */

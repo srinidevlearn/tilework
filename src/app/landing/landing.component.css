@@ -1,6 +1,8 @@
 :host{
 padding:0;
 font-family: poppins,sans-serif;
+scroll-behavior: smooth;
+
 }
 .body {
   overflow-y: auto;
@@ -1674,4 +1676,7 @@ ul > li {
   .image {
     display: none;
   }
+}
+.section-pad{
+  padding:5rem 0rem !important;
 }
